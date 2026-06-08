@@ -14,6 +14,7 @@ import {
   CheckCircle2 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getBackendUrl } from "@/lib/api-helper";
 
 export default function ProfilePage() {
   const [profile, setProfile] = useState({
@@ -40,7 +41,7 @@ export default function ProfilePage() {
     // Fetch profile
     async function loadProfile() {
       try {
-        const res = await fetch("/api/backend/profile");
+        const res = await fetch(getBackendUrl("/api/backend/profile"));
         if (res.ok) {
           const data = await res.json();
           setProfile((prev) => ({ ...prev, ...data }));
@@ -78,7 +79,7 @@ export default function ProfilePage() {
     setSaveSuccess(false);
 
     try {
-      const res = await fetch("/api/backend/profile", {
+      const res = await fetch(getBackendUrl("/api/backend/profile"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(profile)

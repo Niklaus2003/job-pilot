@@ -12,6 +12,7 @@ import {
   RefreshCw 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getBackendUrl } from "@/lib/api-helper";
 
 export default function CloserPage() {
   const [logs, setLogs] = useState<any[]>([]);
@@ -30,7 +31,7 @@ export default function CloserPage() {
     setIsLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/backend/outreach/logs");
+      const res = await fetch(getBackendUrl("/api/backend/outreach/logs"));
       if (res.ok) {
         const data = await res.json();
         setLogs(data || []);
@@ -64,7 +65,7 @@ export default function CloserPage() {
     if (!confirm("Are you sure you want to delete all transaction logs?")) return;
     setIsClearing(true);
     try {
-      const res = await fetch("/api/backend/outreach/clear-logs", { method: "POST" });
+      const res = await fetch(getBackendUrl("/api/backend/outreach/clear-logs"), { method: "POST" });
       if (res.ok) {
         setLogs([]);
         setStats({ sent: 0, drafts: 0, skipped: 0, failed: 0 });

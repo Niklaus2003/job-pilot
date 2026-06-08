@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScoreCard from "@/components/ScoreCard";
+import { getBackendUrl } from "@/lib/api-helper";
 import GapAnalysisComponent from "@/components/GapAnalysis";
 import SideBySideDiff from "@/components/SideBySideDiff";
 import PDFExportButton from "@/components/PDFExportButton";
@@ -72,7 +73,7 @@ export default function PipelinePage() {
 
   const fetchPipeline = async () => {
     try {
-      const res = await fetch("/api/backend/pipeline");
+      const res = await fetch(getBackendUrl("/api/backend/pipeline"));
       if (res.ok) {
         const data = await res.json();
         setPipeline(data || []);
@@ -84,7 +85,7 @@ export default function PipelinePage() {
 
   const fetchProfile = async () => {
     try {
-      const res = await fetch("/api/backend/profile");
+      const res = await fetch(getBackendUrl("/api/backend/profile"));
       if (res.ok) {
         const data = await res.json();
         setProfile(data);
@@ -127,7 +128,7 @@ export default function PipelinePage() {
 
   const updateCardStatus = async (id: string, newStatus: string) => {
     try {
-      const res = await fetch("/api/backend/pipeline/update-status", {
+      const res = await fetch(getBackendUrl("/api/backend/pipeline/update-status"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, status: newStatus })
@@ -147,7 +148,7 @@ export default function PipelinePage() {
     if (!selectedCard) return;
     setIsSavingRecipient(true);
     try {
-      const res = await fetch("/api/backend/pipeline/update-card", {
+      const res = await fetch(getBackendUrl("/api/backend/pipeline/update-card"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -186,7 +187,7 @@ export default function PipelinePage() {
       }
 
       // Save analysis results back to FastAPI database
-      const updateRes = await fetch("/api/backend/pipeline/update-card", {
+      const updateRes = await fetch(getBackendUrl("/api/backend/pipeline/update-card"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -254,7 +255,7 @@ export default function PipelinePage() {
       }
 
       // Save tailored bullets back to FastAPI
-      const updateRes = await fetch("/api/backend/pipeline/update-card", {
+      const updateRes = await fetch(getBackendUrl("/api/backend/pipeline/update-card"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -300,7 +301,7 @@ export default function PipelinePage() {
     }));
 
     // Update on the backend
-    fetch("/api/backend/pipeline/update-card", {
+    fetch(getBackendUrl("/api/backend/pipeline/update-card"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -316,7 +317,7 @@ export default function PipelinePage() {
     setIsGeneratingEmail(true);
     setEmailError(null);
     try {
-      const res = await fetch("/api/backend/outreach/generate", {
+      const res = await fetch(getBackendUrl("/api/backend/outreach/generate"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: selectedCard.id, status: selectedCard.status })
@@ -352,7 +353,7 @@ export default function PipelinePage() {
     setEmailError(null);
     try {
       // Save composer edits first
-      await fetch("/api/backend/pipeline/update-card", {
+      await fetch(getBackendUrl("/api/backend/pipeline/update-card"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -362,7 +363,7 @@ export default function PipelinePage() {
         })
       });
 
-      const res = await fetch("/api/backend/outreach/send", {
+      const res = await fetch(getBackendUrl("/api/backend/outreach/send"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

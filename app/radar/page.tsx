@@ -13,6 +13,7 @@ import {
   AlertCircle 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getBackendUrl } from "@/lib/api-helper";
 
 export default function JobRadarPage() {
   const [searchOptions, setSearchOptions] = useState({
@@ -34,7 +35,7 @@ export default function JobRadarPage() {
   useEffect(() => {
     async function loadPipeline() {
       try {
-        const res = await fetch("/api/backend/pipeline");
+        const res = await fetch(getBackendUrl("/api/backend/pipeline"));
         if (res.ok) {
           const data = await res.json();
           setPipelineUrls(data.map((c: any) => c.url.toLowerCase().trim()));
@@ -78,7 +79,7 @@ export default function JobRadarPage() {
     setSuccessMsg(null);
 
     try {
-      const res = await fetch("/api/backend/scrape", {
+      const res = await fetch(getBackendUrl("/api/backend/scrape"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -115,7 +116,7 @@ export default function JobRadarPage() {
     setPromotingIds((prev) => [...prev, promoId]);
 
     try {
-      const res = await fetch("/api/backend/promote", {
+      const res = await fetch(getBackendUrl("/api/backend/promote"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

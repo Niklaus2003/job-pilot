@@ -32,7 +32,7 @@ class RemoteOKScraper(BaseScraper):
 
         try:
             headers = {"User-Agent": USER_AGENT}
-            response = httpx.get(url, headers=headers, timeout=30, follow_redirects=True)
+            response = httpx.get(url, headers=headers, timeout=5.0, follow_redirects=True)
             response.raise_for_status()
             data = response.json()
         except httpx.HTTPStatusError as e:

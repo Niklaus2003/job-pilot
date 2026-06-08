@@ -26,7 +26,10 @@ export default function NavBar() {
   return (
     <div className="flex h-full w-64 flex-col bg-slate-950 border-r border-white/5 text-white">
       {/* Brand Header */}
-      <div className="flex h-16 shrink-0 items-center gap-3 px-6 border-b border-white/5">
+      <Link 
+        href="/" 
+        className="flex h-16 shrink-0 items-center gap-3 px-6 border-b border-white/5 hover:opacity-90 active:scale-95 transition-all cursor-pointer"
+      >
         <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 via-cyan-500 to-emerald-500 p-[1.2px] shadow-md shadow-indigo-500/20">
           <div className="flex h-full w-full items-center justify-center rounded-[7px] bg-slate-950">
             <Bot className="h-4 w-4 text-cyan-400" />
@@ -35,7 +38,7 @@ export default function NavBar() {
         <span className="text-lg font-black tracking-wider bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
           Hunt<span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">OS</span>
         </span>
-      </div>
+      </Link>
 
       {/* Nav List */}
       <nav className="flex-1 space-y-1.5 px-4 py-6">

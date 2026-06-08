@@ -1,0 +1,22 @@
+Senior Database Engineer - OpenAI
+San Francisco, CA (Hybrid)
+
+ABOUT THE ROLE
+OpenAI is seeking a Senior Database Engineer to join our Applied AI team. You will be responsible for scaling the underlying data infrastructure that powers ChatGPT and our developer API.
+
+RESPONSIBILITIES
+- Optimize high-throughput MySQL clusters handling millions of requests per second.
+- Design and implement distributed database architectures using Vitess.
+- Develop internal tooling to automate database migrations and performance monitoring.
+- Collaborate with product engineers to design efficient data models for new AI features.
+
+REQUIREMENTS
+- 8+ years of experience with relational database internals (MySQL preferred).
+- Expert knowledge of SQL optimization and indexing strategies.
+- Strong proficiency in Go or PHP for building database infra tools.
+- Experience with large-scale distributed systems and high-availability setups.
+
+PREFERRED QUALIFICATIONS
+- Experience with SQLite and localized data storage.
+- Contributions to open-source database projects.
+- Excellent technical communication skills and experience in developer education.

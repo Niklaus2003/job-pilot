@@ -1,0 +1,13 @@
+fastapi>=0.100.0
+uvicorn>=0.20.0
+pydantic>=2.0.0
+requests
+beautifulsoup4
+httpx
+firecrawl-py
+python-dotenv>=1.0.0
+playwright>=1.40.0
+groq>=0.5.0
+colorama>=0.4.6
+streamlit>=1.30.0
+pandas>=2.0.0

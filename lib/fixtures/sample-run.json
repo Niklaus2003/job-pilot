@@ -1,0 +1,105 @@
+{
+  "id": "run-123",
+  "createdAt": "2026-05-21T10:00:00Z",
+  "status": "tailored",
+  "resumeProfile": {
+    "contact": {
+      "name": "José Doe",
+      "email": "jose.doe@example.com",
+      "phone": "+1-555-0199",
+      "location": "San Francisco, CA",
+      "linkedin": "https://linkedin.com/in/josedoe",
+      "github": "https://github.com/josedoe"
+    },
+    "summary": "Experienced software engineer working with Node.js and React.",
+    "skills": ["React", "TypeScript", "Node.js", "GraphQL", "Tailwind CSS"],
+    "experience": [
+      {
+        "company": "Acme Corp",
+        "title": "Software Engineer",
+        "startDate": "2022-01",
+        "endDate": "Present",
+        "bullets": [
+          "Built React dashboards for internal tools.",
+          "Optimized database queries in Node.js backend."
+        ]
+      }
+    ],
+    "projects": [],
+    "education": [
+      {
+        "institution": "University of California, Berkeley",
+        "degree": "B.S. in Computer Science",
+        "dates": "2018-2021"
+      }
+    ],
+    "certifications": []
+  },
+  "jdProfile": {
+    "jobTitle": "Senior Frontend Engineer",
+    "company": "TechFuture Inc",
+    "requiredSkills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Testing Library"],
+    "preferredSkills": ["GraphQL", "Node.js"],
+    "responsibilities": [
+      "Develop and maintain web applications using Next.js and Tailwind.",
+      "Optimize application performance and bundle sizes."
+    ],
+    "qualifications": [
+      "5+ years of experience",
+      "Degree in Computer Science or equivalent"
+    ],
+    "tools": ["Git", "VS Code", "Webpack"],
+    "keywords": ["Frontend", "Next.js", "Performance", "UI/UX"],
+    "seniorityLevel": "senior",
+    "domainSignals": ["Web applications", "E-commerce"]
+  },
+  "originalMatch": {
+    "overallScore": 65,
+    "skillCoverageScore": 60,
+    "responsibilityAlignmentScore": 70,
+    "keywordScore": 50,
+    "seniorityScore": 80,
+    "criticalMissingRequirements": ["Next.js", "Testing Library"],
+    "explanation": "The candidate has a solid foundation in React and TypeScript but lacks Next.js and Testing Library experience as required by the job description."
+  },
+  "gapAnalysis": {
+    "gaps": [
+      {
+        "name": "Next.js",
+        "importance": "high",
+        "jdEvidence": "Develop and maintain web applications using Next.js...",
+        "resumeEvidence": "",
+        "suggestedAction": "Highlight any React framework or server-side rendering experience, or add Next.js personal project to the resume.",
+        "canSafelyAdd": true
+      }
+    ]
+  },
+  "tailoredResume": {
+    "tailoredSummary": "Experienced software engineer specializing in React, Next.js, and modern CSS frameworks like Tailwind. Proven track record of developing responsive web applications.",
+    "tailoredSkills": ["React", "TypeScript", "Next.js", "Node.js", "GraphQL", "Tailwind CSS", "Testing Library"],
+    "tailoredExperience": [
+      {
+        "company": "Acme Corp",
+        "title": "Software Engineer",
+        "bullets": [
+          {
+            "original": "Built React dashboards for internal tools.",
+            "tailored": "Designed and built Next.js-based administration dashboards, utilizing Tailwind CSS for styling and React Testing Library for testing.",
+            "changeReason": "Aligned React dashboard experience with the Next.js and Testing Library requirements from the job description.",
+            "keywordsAddressed": ["Next.js", "Tailwind CSS", "Testing Library"],
+            "confidence": "high"
+          }
+        ]
+      }
+    ]
+  },
+  "tailoredMatch": {
+    "overallScore": 92,
+    "skillCoverageScore": 95,
+    "responsibilityAlignmentScore": 90,
+    "keywordScore": 90,
+    "seniorityScore": 95,
+    "criticalMissingRequirements": [],
+    "explanation": "With the tailored resume, the candidate showcases relevant Next.js and testing experience, raising the match score significantly."
+  }
+}

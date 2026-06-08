@@ -1,0 +1,26 @@
+AARON FRANCIS
+aaron.francis@example.com | 555-123-4567 | Dallas, TX
+linkedin.com/in/aaronfrancis | github.com/aaronfrancis
+
+SUMMARY
+Senior Software Engineer and Developer Educator with 10+ years of experience building scalable Laravel and Vue.js applications. Expert in database optimization, particularly MySQL and SQLite.
+
+EXPERIENCE
+PlanetScale — Senior Developer Advocate (2021-Present)
+- Created "MySQL for Developers," a 6-hour video course viewed by over 100k developers.
+- Developed the PlanetScale serverless driver for JavaScript.
+- Authored technical blog posts resulting in 2M+ unique page views.
+
+Tuple — Senior Software Engineer (2019-2021)
+- Rebuilt the pair programming application's backend in Ruby on Rails.
+- Improved real-time screen sharing performance by 30% using optimized network protocols.
+
+EDUCATION
+Texas A&M University
+Bachelor of Business Administration in Management Information Systems (2012)
+
+SKILLS
+Backend: PHP, Laravel, Ruby on Rails, Node.js, Go
+Frontend: Vue.js, Tailwind CSS, JavaScript, TypeScript
+Databases: MySQL, SQLite, PostgreSQL, Redis
+Other: Video Production, Technical Writing, Developer Relations
